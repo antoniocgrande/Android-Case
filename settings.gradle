@@ -1,0 +1,2 @@
+rootProject.name='TruckPad-Case'
+include ':app'
