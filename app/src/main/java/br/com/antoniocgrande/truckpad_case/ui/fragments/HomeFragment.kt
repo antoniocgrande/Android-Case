@@ -1,22 +1,17 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
-import android.arch.lifecycle.ViewModelProviders
+import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import br.com.antoniocgrande.truckpad_case.R
-import br.com.antoniocgrande.truckpad_case.ui.fragments.ui.home.HomeViewModel
 
 class HomeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() =
-            HomeFragment()
-    }
-
-    private lateinit var viewModel: HomeViewModel
+    private val viewModel: HomeViewModel by lazy { HomeViewModel() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,10 +20,30 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.home_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.getState.observe(this, Observer { state ->
+            when (state) {
+                is HomeState.ShowLoading -> showLoading()
+                is HomeState.HideLoading -> hideLoading()
+                is HomeState.GotoResult -> gotoResult()
+            }
+        })
     }
+
+    /* STATE FUNCTIONS SECTOR */
+    private fun showLoading() {
+
+    }
+
+    private fun hideLoading() {
+
+    }
+
+    private fun gotoResult() = Navigation.findNavController(
+        requireActivity(),
+        R.id.navHostFragment
+    ).navigate(R.id.action_homeFragment_to_resultFragment)
 
 }
