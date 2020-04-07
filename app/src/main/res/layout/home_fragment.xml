@@ -7,14 +7,205 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/message"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutOrigem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearOrigem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditTextOrigem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/endere_o_de_origem"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageViewClearOrigem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HomeFragment"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="@id/textInputLayoutOrigem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputLayoutOrigem"
+        app:layout_constraintTop_toTopOf="@id/textInputLayoutOrigem"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutDestino"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearDestino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutOrigem">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditTextDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/endere_o_de_destino"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageViewClearDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="@id/textInputLayoutDestino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputLayoutDestino"
+        app:layout_constraintTop_toTopOf="@id/textInputLayoutDestino"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textInputLayoutEixos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:hint="@string/quantidade_de_eixos"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/numberPickerEixos"
+        app:layout_constraintEnd_toStartOf="@id/numberPickerEixos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutDestino" />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+        android:id="@+id/numberPickerEixos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:focusable="true"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayoutDestino"
+        app:layout_constraintStart_toEndOf="@id/textInputLayoutEixos"
+        app:layout_constraintTop_toTopOf="@id/textInputLayoutEixos"
+        app:max="9"
+        app:min="2"
+        app:unit="1" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutConsumo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearConsumo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberPickerEixos">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditTextConsumo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/consumo_m_dio_km_l"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/_7_5" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageViewClearConsumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="@id/textInputLayoutConsumo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputLayoutConsumo"
+        app:layout_constraintTop_toTopOf="@id/textInputLayoutConsumo"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPreco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearPreco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutConsumo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditTextPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pre_o_do_litro_do_diesel_r"
+            android:imeOptions="actionGo"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/_3_73" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageViewClearPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:layout_constraintBottom_toBottomOf="@id/textInputLayoutPreco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputLayoutPreco"
+        app:layout_constraintTop_toTopOf="@id/textInputLayoutPreco"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/buttonCalcularCustos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:enabled="false"
+        android:text="@string/calcular_custos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.7"
+        android:background="@color/colorLightGray"
+        android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

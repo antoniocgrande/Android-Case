@@ -40,4 +40,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /* NumberPicker */
+    implementation 'com.github.travijuu:numberpicker:1.0.7'
+
+    /* Retrofit */
+    def retrofit_version = "2.3.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 }

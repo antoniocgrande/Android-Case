@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TruckPad-Case</string>
+    <string name="endere_o_de_origem">Endereço de origem</string>
+    <string name="endere_o_de_destino">Endereço de destino</string>
+    <string name="quantidade_de_eixos">Quantidade de eixos</string>
+    <string name="consumo_m_dio_km_l">Consumo médio (Km/L)</string>
+    <string name="_7_5">7,5</string>
+    <string name="pre_o_do_litro_do_diesel_r">Preço do litro do diesel (R$)</string>
+    <string name="calcular_custos">Calcular custos</string>
+    <string name="_3_73">3,73</string>
 </resources>
