@@ -1,4 +1,6 @@
-package br.com.antoniocgrande.truckpad_case.data
+package br.com.antoniocgrande.truckpad_case.data.request
+
+import com.google.gson.annotations.SerializedName
 
 /* Copyright 2020.
  ************************************************************
@@ -8,7 +10,7 @@ package br.com.antoniocgrande.truckpad_case.data
  * Date        : 07/04/2020 07:48
  ************************************************************/
 data class Route(
-    var places: MutableList<Place>? = null,
-    var fuelConsumption: Int,
-    var fuelPrice: Float
+    @SerializedName("places") var places: MutableList<Place>? = null,
+    @SerializedName("fuel_consumption") var fuelConsumption: Float,
+    @SerializedName("fuel_price") var fuelPrice: Float
 )

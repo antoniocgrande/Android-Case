@@ -1,12 +1,18 @@
-package br.com.antoniocgrande.truckpad_case.data
+package br.com.antoniocgrande.truckpad_case.data.network
+
 
 /* Copyright 2020.
  ************************************************************
  * Project     : TruckPad-Case
- * Description : br.com.antoniocgrande.truckpad_case.data
+ * Description : br.com.antoniocgrande.truckpad_case.data.network
  * Created by  : antoniocgrande
- * Date        : 07/04/2020 07:50
+ * Date        : 07/04/2020 18:40
  ************************************************************/
-data class Place(
-    var point: List<Float>? = null
-)
+class RouteRepository {
+
+
+
+
+
+
+}

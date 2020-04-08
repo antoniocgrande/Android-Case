@@ -1,6 +1,8 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
 import android.location.Location
+import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
+import retrofit2.Response
 
 /* Copyright 2020.
  ************************************************************
@@ -15,7 +17,9 @@ internal sealed class HomeState {
 
     object HideLoading : HomeState()
 
-    object GotoResult : HomeState()
+    data class CalcCostSuccess(val response: Response<RouteResponse?>) : HomeState()
+
+    data class CalcCostError(val message: String?) : HomeState()
 
     data class GpsCurrentLocation(val currentLocation: Location) : HomeState()
 
