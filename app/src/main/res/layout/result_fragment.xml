@@ -1,13 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ResultFragment">
 
-    <TextView
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/home"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewOrigem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewOrigemValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/endereco_origem"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewDestino"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewOrigem">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewDestinoValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/endereco_destino"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewEixos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDestino">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewEixosValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/quantidade_eixos"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewDuracao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewEixos">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewDuracaoValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/duracao"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewDistancia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDuracao">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewDistanciaValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/distancia"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewPedagio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDistancia">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewPedagioValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pedagio"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewCombustivelNecessario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPedagio">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewCombustivelNecessarioValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/combustivel_necessario"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewTotalCombustivel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewCombustivelNecessario">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewTotalCombustivelValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/total_de_combusivel"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textViewTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTotalCombustivel">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textViewTotalValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/total"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+

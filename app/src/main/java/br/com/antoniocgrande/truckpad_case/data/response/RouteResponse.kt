@@ -1,6 +1,7 @@
 package br.com.antoniocgrande.truckpad_case.data.response
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 /* Copyright 2020.
@@ -10,7 +11,7 @@ import com.google.gson.annotations.SerializedName
  * Created by  : antoniocgrande
  * Date        : 07/04/2020 22:29
  ************************************************************/
-class RouteResponse {
+class RouteResponse : Serializable {
     @SerializedName("points")
     var points: List<Point>? =
         null

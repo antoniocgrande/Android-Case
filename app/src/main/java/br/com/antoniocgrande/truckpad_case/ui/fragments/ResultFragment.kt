@@ -1,13 +1,13 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import br.com.antoniocgrande.truckpad_case.R
+import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
+import kotlinx.android.synthetic.main.result_fragment.*
 
 class ResultFragment : Fragment() {
 
@@ -24,10 +24,21 @@ class ResultFragment : Fragment() {
         return inflater.inflate(R.layout.result_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ResultViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        arguments?.run {
+            val response = getSerializable("response") as RouteResponse
+
+            textViewOrigemValue.setText("")
+            textViewDestinoValue.setText("")
+            textViewEixosValue.setText(getString("axis"))
+            textViewDuracaoValue.setText(response.duration.toString())
+            textViewDistanciaValue.setText(response.distance.toString())
+            textViewPedagioValue.setText("")
+            textViewCombustivelNecessarioValue.setText(response.fuelUsage.toString())
+            textViewTotalCombustivelValue.setText(response.fuelCost.toString())
+            textViewTotalValue.setText(response.tollCost.toString())
+        }
     }
 
 }

@@ -1,6 +1,7 @@
 package br.com.antoniocgrande.truckpad_case.data.request
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 /* Copyright 2020.
  ************************************************************
@@ -11,4 +12,4 @@ import com.google.gson.annotations.SerializedName
  ************************************************************/
 data class Place(
     @SerializedName("point") var point: List<Float>? = null
-)
+) : Serializable

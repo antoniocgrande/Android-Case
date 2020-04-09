@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.navigation.Navigation
 import br.com.antoniocgrande.truckpad_case.R
 import br.com.antoniocgrande.truckpad_case.data.request.Place
-import br.com.antoniocgrande.truckpad_case.data.request.Route
+import br.com.antoniocgrande.truckpad_case.data.request.RouteRequest
 import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
 import kotlinx.android.synthetic.main.home_fragment.*
 import retrofit2.Response
@@ -20,6 +20,18 @@ import retrofit2.Response
 class HomeFragment : Fragment() {
 
     private val viewModel: HomeViewModel by lazy { HomeViewModel() }
+    private val routeRequest = mutableListOf<RouteRequest>()
+    private val places = mutableListOf<Place>()
+
+//    /* mock payload */
+//    private val places = mutableListOf<Place>()
+//    private val route by lazy {
+//        Route(
+//            places,
+//            7F,
+//            3.4F
+//        )
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,11 +43,25 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        setMock()
         setupState()
         setupListeners()
     }
 
     /* SETUP FUNCTIONS SECTOR */
+//    private fun setMock() {
+//        places.add(
+//            Place(
+//                arrayListOf(-46.68664F, -23.59496F)
+//            )
+//        )
+//        places.add(
+//            Place(
+//                arrayListOf(-46.67678F, -23.59867F)
+//            )
+//        )
+//    }
+
     private fun setupState() {
         viewModel.getState.observe(this, Observer { state ->
             when (state) {
@@ -53,42 +79,17 @@ class HomeFragment : Fragment() {
         clearText(
             imageViewClearConsumo,
             textInputEditTextConsumo,
-            resources.getString(R.string._7_5)
+            resources.getString(R.string.consumo_medio_valor_padrao)
         )
-        clearText(imageViewClearPreco, textInputEditTextPreco, resources.getString(R.string._3_73))
+        clearText(
+            imageViewClearPreco,
+            textInputEditTextPreco,
+            resources.getString(R.string.preco_litro_do_diesel)
+        )
+//        buttonCalcularCustos.setOnClickListener { viewModel.calcCost(route) }
 
 
-        /* mock payload */
-        val places = mutableListOf<Place>()
-        places.add(
-            Place(
-                arrayListOf(-46.68664F, -23.59496F)
-            )
-        )
-        places.add(
-            Place(
-                arrayListOf(-46.67678F, -23.59867F)
-            )
-        )
-        val route = Route(
-            places,
-            7F,
-            3.4F
-        )
 
-//        {
-//            "fuelConsumption":7,
-//            "fuelPrice":3.4,
-//            "places":[
-//            {
-//                "point":[
-//                -46.68664,
-//                -23.59496
-//                ]
-//            }]
-//        }
-
-        buttonCalcularCustos.setOnClickListener { viewModel.calcCost(route) }
     }
 
     private fun clearText(
@@ -110,10 +111,16 @@ class HomeFragment : Fragment() {
         linearLayoutProgressBar.visibility = View.GONE
     }
 
-    private fun gotoResult(response: Response<RouteResponse?>) = Navigation.findNavController(
-        requireActivity(),
-        R.id.navHostFragment
-    ).navigate(R.id.action_homeFragment_to_resultFragment)
+    private fun gotoResult(response: Response<RouteResponse?>) {
+
+        Navigation.findNavController(
+            requireActivity(),
+            R.id.navHostFragment
+        ).navigate(R.id.action_homeFragment_to_resultFragment, Bundle().apply {
+            putSerializable("response", response.body())
+            putSerializable("axis", numberPickerEixos.value.toString())
+        })
+    }
 
     private fun showError(message: String?) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()

@@ -21,7 +21,7 @@
             android:id="@+id/textInputEditTextOrigem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/endere_o_de_origem"
+            android:hint="@string/endereco_origem"
             android:imeOptions="actionNext"
             android:lines="1"
             android:maxLines="1"
@@ -55,7 +55,7 @@
             android:id="@+id/textInputEditTextDestino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/endere_o_de_destino"
+            android:hint="@string/endereco_destino"
             android:imeOptions="actionNext"
             android:lines="1"
             android:maxLines="1"
@@ -80,7 +80,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_16"
-        android:hint="@string/quantidade_de_eixos"
+        android:hint="@string/quantidade_eixos"
         android:lines="1"
         android:maxLines="1"
         android:singleLine="true"
@@ -116,13 +116,13 @@
             android:id="@+id/textInputEditTextConsumo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/consumo_m_dio_km_l"
+            android:hint="@string/consumo_medio_km_por_l"
             android:imeOptions="actionNext"
             android:inputType="numberDecimal"
             android:lines="1"
             android:maxLines="1"
             android:singleLine="true"
-            android:text="@string/_7_5" />
+            android:text="@string/consumo_medio_valor_padrao" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -152,13 +152,13 @@
             android:id="@+id/textInputEditTextPreco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/pre_o_do_litro_do_diesel_r"
+            android:hint="@string/preco_litro_do_diesel"
             android:imeOptions="actionGo"
             android:inputType="numberDecimal"
             android:lines="1"
             android:maxLines="1"
             android:singleLine="true"
-            android:text="@string/_3_73" />
+            android:text="@string/preco_litro_do_diesel_valor_padrao" />
 
     </android.support.design.widget.TextInputLayout>
 

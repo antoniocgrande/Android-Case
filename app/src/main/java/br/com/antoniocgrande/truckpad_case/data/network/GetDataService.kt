@@ -1,6 +1,6 @@
 package br.com.antoniocgrande.truckpad_case.data.network
 
-import br.com.antoniocgrande.truckpad_case.data.request.Route
+import br.com.antoniocgrande.truckpad_case.data.request.RouteRequest
 import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
 import retrofit2.Call
 import retrofit2.http.Body
@@ -16,6 +16,6 @@ import retrofit2.http.POST
 interface GetDataService {
 
     @POST("/v1/route")
-    fun calcCost(@Body route: Route): Call<RouteResponse?>?
+    fun calcCost(@Body routeRequest: RouteRequest): Call<RouteResponse?>?
 
 }
