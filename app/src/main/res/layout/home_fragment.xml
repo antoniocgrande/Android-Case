@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home"
@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.HomeFragment">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutOrigem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextOrigem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:maxLines="1"
             android:singleLine="true" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageViewClearOrigem"
@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_clear_black_24dp"
         tools:ignore="ContentDescription" />
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutDestino"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputLayoutOrigem">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextDestino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:maxLines="1"
             android:singleLine="true" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageViewClearDestino"
@@ -102,7 +102,7 @@
         app:min="2"
         app:unit="1" />
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutConsumo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numberPickerEixos">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextConsumo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
             android:singleLine="true"
             android:text="@string/consumo_medio_valor_padrao" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageViewClearConsumo"
@@ -138,7 +138,7 @@
         app:srcCompat="@drawable/ic_clear_black_24dp"
         tools:ignore="ContentDescription" />
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPreco"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputLayoutConsumo">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextPreco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
             android:singleLine="true"
             android:text="@string/preco_litro_do_diesel_valor_padrao" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageViewClearPreco"
@@ -208,4 +208,4 @@
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

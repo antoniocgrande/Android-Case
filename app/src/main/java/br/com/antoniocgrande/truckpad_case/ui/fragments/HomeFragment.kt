@@ -1,26 +1,27 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
-import android.arch.lifecycle.Observer
 import android.os.Bundle
-import android.support.design.widget.TextInputEditText
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import br.com.antoniocgrande.truckpad_case.R
 import br.com.antoniocgrande.truckpad_case.data.request.Place
 import br.com.antoniocgrande.truckpad_case.data.request.RouteRequest
 import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
+import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.home_fragment.*
 import retrofit2.Response
+
 
 class HomeFragment : Fragment() {
 
     private val viewModel: HomeViewModel by lazy { HomeViewModel() }
-    private val routeRequest = mutableListOf<RouteRequest>()
+    private lateinit var routeRequest: RouteRequest
     private val places = mutableListOf<Place>()
 
 //    /* mock payload */
@@ -88,7 +89,9 @@ class HomeFragment : Fragment() {
         )
 //        buttonCalcularCustos.setOnClickListener { viewModel.calcCost(route) }
 
+        textInputEditTextOrigem.setOnClickListener {
 
+        }
 
     }
 

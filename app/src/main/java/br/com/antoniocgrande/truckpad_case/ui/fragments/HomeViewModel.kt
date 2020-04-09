@@ -1,8 +1,8 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import br.com.antoniocgrande.truckpad_case.data.network.GetDataService
 import br.com.antoniocgrande.truckpad_case.data.network.RetrofitClientInstance
 import br.com.antoniocgrande.truckpad_case.data.request.RouteRequest
