@@ -4,10 +4,8 @@
     <string name="endereco_destino">Endereço de destino</string>
     <string name="quantidade_eixos">Quantidade de eixos</string>
     <string name="consumo_medio_km_por_l">Consumo médio (Km/L)</string>
-    <string name="consumo_medio_valor_padrao">7,5</string>
     <string name="preco_litro_do_diesel">Preço do litro do diesel (R$)</string>
     <string name="calcular_custos">Calcular custos</string>
-    <string name="preco_litro_do_diesel_valor_padrao">3,73</string>
     <string name="home_fragment">Dados para pesquisa</string>
     <string name="result_fragment">Resultado</string>
     <string name="duracao">Duração (Horas)</string>
@@ -16,4 +14,6 @@
     <string name="combustivel_necessario">Combustível necessário (Litros)</string>
     <string name="total_de_combusivel">Total de combusível (R$)</string>
     <string name="total">Total (R$)</string>
+    <string name="consumo_medio_valor_padrao">7.5</string>
+    <string name="preco_litro_do_diesel_valor_padrao">3.73</string>
 </resources>

@@ -12,6 +12,9 @@ import java.io.Serializable
  ************************************************************/
 data class RouteRequest(
     @SerializedName("places") var places: MutableList<Place>? = null,
-    @SerializedName("fuel_consumption") var fuelConsumption: Float,
-    @SerializedName("fuel_price") var fuelPrice: Float
+    @SerializedName("fuel_consumption") var fuelConsumption: Float? = null,
+    @SerializedName("fuel_price") var fuelPrice: Float? = null,
+
+    var literalOriginAddress: String? = null,
+    var literalDetinationAddress: String? = null
 ) : Serializable

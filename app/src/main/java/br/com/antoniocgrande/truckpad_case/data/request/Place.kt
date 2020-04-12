@@ -11,5 +11,5 @@ import java.io.Serializable
  * Date        : 07/04/2020 07:50
  ************************************************************/
 data class Place(
-    @SerializedName("point") var point: List<Float>? = null
+    @SerializedName("point") var point: List<Float?>? = null
 ) : Serializable

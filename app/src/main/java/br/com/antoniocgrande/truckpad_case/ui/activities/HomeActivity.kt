@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_activity)
+        setContentView(R.layout.activity_home)
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 

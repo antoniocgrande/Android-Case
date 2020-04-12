@@ -28,10 +28,12 @@ class HomeViewModel : ViewModel() {
     }
 
     fun calcCost(routeRequest: RouteRequest) {
+        _state.value = HomeState.ShowLoading
         dataService?.calcCost(routeRequest).apply {
             this?.enqueue(object : Callback<RouteResponse?> {
                 override fun onFailure(call: Call<RouteResponse?>, t: Throwable) {
                     _state.value = HomeState.CalcCostError(t.message)
+                    _state.value = HomeState.HideLoading
                 }
 
                 override fun onResponse(
@@ -39,6 +41,7 @@ class HomeViewModel : ViewModel() {
                     response: Response<RouteResponse?>
                 ) {
                     _state.value = HomeState.CalcCostSuccess(response)
+                    _state.value = HomeState.HideLoading
                 }
 
             })

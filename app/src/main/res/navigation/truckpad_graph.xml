@@ -9,7 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="br.com.antoniocgrande.truckpad_case.ui.fragments.HomeFragment"
         android:label="@string/home_fragment"
-        tools:layout="@layout/home_fragment">
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
@@ -19,10 +19,13 @@
         android:id="@+id/resultFragment"
         android:name="br.com.antoniocgrande.truckpad_case.ui.fragments.ResultFragment"
         android:label="@string/result_fragment"
-        tools:layout="@layout/result_fragment">
+        tools:layout="@layout/fragment_result">
         <argument
             android:name="response"
             app:argType="br.com.antoniocgrande.truckpad_case.data.response.RouteResponse" />
+        <argument
+            android:name="request"
+            app:argType="br.com.antoniocgrande.truckpad_case.data.request.RouteRequest" />
         <argument
             android:name="axis"
             android:defaultValue="2"

@@ -5,6 +5,7 @@
     android:id="@+id/home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animationCache="true"
     tools:context=".ui.fragments.HomeFragment">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -21,6 +22,8 @@
             android:id="@+id/textInputEditTextOrigem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
             android:hint="@string/endereco_origem"
             android:imeOptions="actionNext"
             android:lines="1"
@@ -55,6 +58,8 @@
             android:id="@+id/textInputEditTextDestino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
             android:hint="@string/endereco_destino"
             android:imeOptions="actionNext"
             android:lines="1"

@@ -10,7 +10,10 @@ package br.com.antoniocgrande.truckpad_case.utils
 class Constants {
 
     companion object {
-        val REQUEST_ADDRESS: Int = 999
+        const val REQUEST_ADDRESS_ORIGEN: Int = 999
+        const val REQUEST_ADDRESS_DESTINO: Int = 888
+        const val PLACE_ADD_ORIGEM: Int = 0
+        const val PLACE_ADD_DESTINO: Int = 1
     }
 
 }
