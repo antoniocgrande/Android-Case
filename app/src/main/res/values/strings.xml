@@ -16,4 +16,11 @@
     <string name="total">Total (R$)</string>
     <string name="consumo_medio_valor_padrao">7.5</string>
     <string name="preco_litro_do_diesel_valor_padrao">3.73</string>
+    <string name="busca_endereco">Busca de endereço</string>
+    <string name="antt_perigosa">Perigosa (R$) + padágio</string>
+    <string name="antt_frigorificada">Frigorificada (R$) + padágio</string>
+    <string name="antt_neogranel">Neogranel (R$) + padágio</string>
+    <string name="antt_granel">Granel (R$) + padágio</string>
+    <string name="antt_geral">Geral (R$) + padágio</string>
+    <string name="tabela_frete_precos_minimos_antt">Tabela Frete - Preços Mínimos - ANTT</string>
 </resources>

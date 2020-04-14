@@ -14,6 +14,8 @@ class Constants {
         const val REQUEST_ADDRESS_DESTINO: Int = 888
         const val PLACE_ADD_ORIGEM: Int = 0
         const val PLACE_ADD_DESTINO: Int = 1
+        const val PERMISSION_REQUEST = 10
+        const val INITIAL_AXIS = 2
     }
 
 }

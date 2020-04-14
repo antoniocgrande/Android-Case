@@ -1,6 +1,6 @@
 package br.com.antoniocgrande.truckpad_case.ui.fragments
 
-import br.com.antoniocgrande.truckpad_case.data.response.RouteResponse
+import br.com.antoniocgrande.truckpad_case.data.response.AnttPriceResponse
 import retrofit2.Response
 
 /* Copyright 2020.
@@ -10,14 +10,14 @@ import retrofit2.Response
  * Created by  : antoniocgrande
  * Date        : 03/04/2020 23:24
  ************************************************************/
-internal sealed class HomeState {
+internal sealed class ResultState {
 
-    object ShowLoading : HomeState()
+    object ShowLoading : ResultState()
 
-    object HideLoading : HomeState()
+    object HideLoading : ResultState()
 
-    data class CalcCostSuccess(val response: Response<RouteResponse?>) : HomeState()
+    data class AnttPriceSuccess(val response: Response<AnttPriceResponse?>) : ResultState()
 
-    data class CalcCostError(val message: String?) : HomeState()
+    data class AnttPriceError(val message: String?) : ResultState()
 
 }

@@ -13,12 +13,23 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitClientInstance {
 
     private var retrofit: Retrofit? = null
-    private val BASE_URL = "https://geo.api.truckpad.io"
+    private val BASE_URL_ROUTE = "https://geo.api.truckpad.io"
+    private val BASE_URL_ANTT_PRICE = "https://tictac.api.truckpad.io"
 
-    fun getRetrofitInstance(): Retrofit? {
-        if (retrofit == null) {
-            retrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
+    fun getRouteInstance(): Retrofit? {
+        when (retrofit) {
+            null -> retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL_ROUTE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
+        return retrofit
+    }
+
+    fun getAnttPriceInstance(): Retrofit? {
+        when (retrofit) {
+            null -> retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL_ANTT_PRICE)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }

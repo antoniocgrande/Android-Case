@@ -11,21 +11,12 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class HomeViewModel : ViewModel() {
 
     private val _state = MutableLiveData<HomeState>()
     private val dataService =
-        RetrofitClientInstance().getRetrofitInstance()?.create(GetDataService::class.java)
+        RetrofitClientInstance().getRouteInstance()?.create(GetDataService::class.java)
     internal val getState: LiveData<HomeState> = _state
-
-    fun getGpsCurrentLocation() {
-
-    }
-
-    fun addressList() {
-
-    }
 
     fun calcCost(routeRequest: RouteRequest) {
         _state.value = HomeState.ShowLoading

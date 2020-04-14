@@ -12,8 +12,6 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
-import kotlinx.android.synthetic.main.activity_places_geo.*
-
 
 class PlacesGeoActivity : AppCompatActivity() {
 
@@ -21,10 +19,13 @@ class PlacesGeoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_places_geo)
 
+        setToolbar()
         setupPlaces()
+    }
 
-        idCardView.performClick()
-
+    private fun setToolbar() {
+        val actionbar: androidx.appcompat.app.ActionBar? = supportActionBar
+        actionbar?.title = getString(R.string.busca_endereco)
     }
 
     private fun setupPlaces() {

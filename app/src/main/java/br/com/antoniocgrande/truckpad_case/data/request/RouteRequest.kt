@@ -14,6 +14,7 @@ data class RouteRequest(
     @SerializedName("places") var places: MutableList<Place>? = null,
     @SerializedName("fuel_consumption") var fuelConsumption: Float? = null,
     @SerializedName("fuel_price") var fuelPrice: Float? = null,
+    @SerializedName("axis") var axis: Int? = null,
 
     var literalOriginAddress: String? = null,
     var literalDetinationAddress: String? = null

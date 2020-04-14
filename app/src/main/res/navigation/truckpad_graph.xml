@@ -26,10 +26,6 @@
         <argument
             android:name="request"
             app:argType="br.com.antoniocgrande.truckpad_case.data.request.RouteRequest" />
-        <argument
-            android:name="axis"
-            android:defaultValue="2"
-            app:argType="string" />
     </fragment>
 
 </navigation>
